@@ -1,0 +1,213 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Lexend:wght@100..900&family=Nothing+You+Could+Do&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Smooch+Sans:wght@100..900&family=Tangerine:wght@400;700&display=swap');
+
+:root {
+    --cor_fundo_cabec: #A6323B;
+    --cor_fundo_rodap: #02213b;
+    --cor_fundo: rgba(232, 227, 210, 0.614);
+    --cor_01: #FCCD28;
+    --cor_02: #A79453;
+    --cor_03: #D2C07A;
+    --cor_04: #000000;
+    --cor_05: #FFFFFF;
+    --cor_06: #cd3d49fc;
+    --cor_07: #ffffffc1;
+    --cor_08: #043d6e;
+    --cor-09: rgba(175, 172, 161, 0.644);
+    --cor_10: #dbd8d8;
+    --cor_11: #d6d3d383;
+    --cor_12: #232323ac;
+    
+    --fonte_padrao: Verdana, Arial, Helvetica, sans-serif;
+    --fonte_destaque: 'Tangerine', serif;
+    --fonte_01: "Lexend", serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--fonte_01);
+    font-size: 1.1em;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+    text-decoration: none;
+    list-style: none;
+}
+
+body, html{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* main{
+    background-color: var(--cor_fundo);
+    width: 90vw;
+    margin: auto;
+    padding: 10px;
+} */
+
+img{
+    margin: auto;
+}
+
+.header{
+    background-image: linear-gradient(var(--cor_fundo_cabec), var(--cor_06));
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.5em;
+    top: 0;
+    gap: 10px;
+    position: fixed;
+    z-index: 3;
+}
+
+.header i{
+    display: block;
+    color: #fff;
+    font-size: 2em;
+    padding: 0.1em;
+}
+
+.header i:hover{
+    color: var(--cor_03);
+    cursor: pointer;
+}
+
+#logo i{
+    font-size: 2em;
+}
+
+#nav-list{
+    display: none;
+    flex-flow: row wrap;
+    flex-grow: 1;
+    gap: 1px;
+}
+
+#nav-list li{
+    list-style: none;
+    font-family: "Smooch Sans", serif;
+    font-size: 1.5em;
+}
+
+#nav-list a{
+    color: #fff;
+    padding: 1px 3px;
+    font-weight: 400;
+}
+
+#nav-list a:hover{
+    border: 1px solid #fff;
+    background-color: #ffffff81;
+    color: #ad323c;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.header img{width: 3em;}
+
+/* @media screen and (max-width: 700px) {
+    #menu {
+        display: none;
+    }
+} */
+
+/* Configurando a imagem principal da Home */
+.homeimg-container{
+    background-image: 
+    linear-gradient(to bottom, #000, transparent),
+    url(../imagens/psjb-igreja.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 4em;
+}
+
+.homeimg-img{
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+    animation: animaInput 2.5s;
+}
+
+.homeimg-img img{
+    width: 5em;
+}
+
+/* Configurando os contatos */
+/* Responsividade Mobile Retrato */
+@media screen and (max-width: 700px) {
+    /* Configurando o Home */
+    .homeimg-img{
+        font-size: 1em;
+    }
+
+    .contatos-container{
+        color: #fff;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contatos{margin-top: 8px;}
+
+    .contatos li {
+        text-align: left;
+        width: 95%;
+        font-size: 0.8em;
+        margin: 10px auto;
+    }
+
+    /* Configurano o main */
+    .homemain-container{
+        display: flex;
+        flex-direction: column;
+        background-image: 
+        linear-gradient(to right, var(--cor_fundo_rodap), var(--cor_08)),
+        url(../imagens/logo-psjb.png);
+        background-position: cover;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 1em;
+        height: 80vh;
+        overflow-y: scroll;
+        margin: 5px 10px;
+        font-size: 1em;
+    }
+
+    .homemain-container img{width: 10em;}
+
+    #homemain-text02{margin-top: 2em;}
+}
+
+.contatos li{
+    background-color: #ffffff90;
+    color: #504e4e;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+}
+
+.contatos li:hover{
+    color: #fff;
+}
+
+.contatos li:hover{
+    opacity: 1;
+    background-image: linear-gradient(to right, var(--cor1), var(--cor2));
+}

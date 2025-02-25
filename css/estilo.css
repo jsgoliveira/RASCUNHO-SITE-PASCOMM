@@ -1,0 +1,305 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Lexend:wght@100..900&family=Nothing+You+Could+Do&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Smooch+Sans:wght@100..900&family=Tangerine:wght@400;700&display=swap');
+
+:root {
+    --cor_fundo_cabec: #A6323B;
+    --cor_fundo_rodap: #02213b;
+    --cor_fundo: rgba(232, 227, 210, 0.614);
+    --cor_01: #FCCD28;
+    --cor_02: #A79453;
+    --cor_03: #D2C07A;
+    --cor_04: #000000;
+    --cor_05: #FFFFFF;
+    --cor_06: #cd3d49fc;
+    --cor_07: #ffffffc1;
+    --cor_08: #043d6e;
+    --cor-09: rgba(175, 172, 161, 0.644);
+    --cor_10: #ede8d2;
+    --cor_11: #d6d3d383;
+    --cor_12: #232323ac;
+
+    --fonte_padrao: Verdana, Arial, Helvetica, sans-serif;
+    --fonte_destaque: 'Tangerine', serif;
+    --fonte_01: "Lexend", serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--cor_10);
+    font-family: var(--fonte_01);
+}
+
+/* Personalizando o Cabeçalho (Header) */
+.header{
+    background-image: linear-gradient(to bottom, var(--cor_fundo_cabec), var(--cor_06));
+    color: #fff;
+    height: 4em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    top: 0;
+    gap: 10px;
+    position: fixed;
+    z-index: 3;
+}
+
+.header img{
+    height: 3.7em;
+}
+
+#nav-list{
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 1;
+    gap: 15px;
+}
+
+#nav-list li{
+    list-style: none;
+    font-family: "Smooch Sans", serif;
+    font-size: 2em;
+}
+
+#nav-list a{
+    color: #fff;
+    text-decoration: none;
+    padding: 1px 3px;
+    font-weight: 400;
+}
+
+#nav-list a:hover{
+    border: 1px solid #fff;
+    background-color: #ffffff81;
+    color: #ad323c;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.header i{
+    display: none;
+    color: #fff;
+    font-size: 2em;
+    padding: 0.1em;
+}
+
+.header i:hover{
+    color: var(--cor_03);
+    cursor: pointer;
+}
+/* Media query para Header */
+
+/* Configurando a imagem principal da Home */
+.homeimg-container{
+    background-image: 
+    linear-gradient(to bottom, #000, transparent),
+    url(../imagens/psjb-igreja.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+}
+
+@keyframes animaInput{
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.homeimg-img{
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+    animation: animaInput 2.5s;
+}
+
+.homeimg-img img{
+    width: 8em;
+}
+
+/* Configurando os contatos */
+.contatos-container{
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    animation: animaInput 3s linear;
+    margin-top: 80px;
+}
+
+.contatos{
+    display: flex;
+    margin-top: 1em;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    gap: 10px;
+}
+
+.contatos li{
+    background-color: #ffffff90;
+    color: #504e4e;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+}
+
+.contatos li:hover{
+    color: #fff;
+}
+
+.contatos li:hover{
+    opacity: 1;
+    background-image: linear-gradient(to right, var(--cor1), var(--cor2));
+}
+
+/* Configurando o main Home */
+.homemain-container{
+    display: flex;
+    flex-direction: row;
+    margin: 2em 4em;
+    background-image: 
+    linear-gradient(to right, var(--cor_fundo_rodap), var(--cor_08)),
+    url(../imagens/logo-psjb.png);
+    background-position: cover;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    padding: 2em;
+}
+
+.homemain-container::before{
+    content: "";
+    background-image: url(../imagens/logo-psjb.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.1;
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    z-index: 1;
+}
+
+.homemain-container img{
+    width: 15em;
+
+}
+
+#homemain-text01 p{
+    padding: 1.5em 0.5em 0em 0em;
+}
+
+#homemain-text02{
+    text-align: right;
+    padding: 1.5em 1em 0em 0em;
+}
+
+span{
+    font-weight: 500;
+}
+
+/* Configurando o banner São João */
+.padroeiro-box{
+    background-image:
+    url(../imagens/nsr.JPG),
+    linear-gradient(to right, var(--cor_fundo_cabec), var(--cor_06));
+    background-size: 250px 100%, 100%;
+    background-position: 95% center, center;
+    background-repeat: no-repeat;
+    border: 1px solid #000;
+    padding: 1em 5em;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.padroeiro-box p{
+    width: 75%;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.padroeiro-box a{
+    color: var(--cor_03);
+    transition: 0.2s;
+    font-size: 1.3em;
+}
+
+.padroeiro-box a:hover{
+    color: #A79453;
+}
+
+#assinatura-saojoao{
+    font-family: "Nothing You Could Do", serif;
+    font-weight: 800;
+    text-align: right;
+    margin-top: 10px;
+    color: var(--cor_03);
+}
+
+/* Rodapé */
+.footer{
+    background-image: linear-gradient(to bottom, var(--cor_fundo_rodap), var(--cor_08));
+    padding: 1em 2em;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.footer-img-text{
+    margin: 0 1em;
+    justify-content: center;
+}
+
+.footer-text{
+    margin: 0 1em;
+    flex-direction: column;
+}
+
+.footer-links a{
+    color: #fff;
+    padding: 0 5px;
+    font-size: 1.2em;
+}
+
+.footer-links a:hover{
+    color: #ffffff93;
+}
+
+.footer img{
+    width: 11em;
+}
+
+.maps iframe{
+    width: 15em;
+    height: 15em;
+    border-radius: 5px;
+}
